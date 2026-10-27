@@ -1,0 +1,6 @@
+SELECT title, ub.board_id, reply_id, ur.writer_id, ur.contents, ur.created_date
+from used_goods_board ub
+inner join used_goods_reply ur
+on ub.board_id = ur.board_id
+where ub.created_date like '2022-10%'
+order by ur.created_date asc, title asc
