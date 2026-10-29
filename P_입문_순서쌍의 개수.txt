@@ -1,0 +1,22 @@
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        int m=n;
+        int sqrt = 0;
+        if(n == 1) return 1;
+        while (n/m <= m){
+            if(n%m == 0){
+                answer++;
+                
+                if(n/m == m){
+                    sqrt = 1;
+                }
+            }
+            m--;
+        }
+        
+        
+        
+        return  sqrt == 0 ? answer*2 : answer*2-1;
+    }
+}
